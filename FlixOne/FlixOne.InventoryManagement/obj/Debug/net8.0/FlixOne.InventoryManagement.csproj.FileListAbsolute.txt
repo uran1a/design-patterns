@@ -1,0 +1,12 @@
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.GeneratedMSBuildEditorConfig.editorconfig
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.AssemblyInfoInputs.cache
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.AssemblyInfo.cs
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.csproj.CoreCompileInputs.cache
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.sourcelink.json
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\bin\Debug\net8.0\FlixOne.InventoryManagement.deps.json
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\bin\Debug\net8.0\FlixOne.InventoryManagement.dll
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\bin\Debug\net8.0\FlixOne.InventoryManagement.pdb
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.dll
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\refint\FlixOne.InventoryManagement.dll
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.pdb
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\ref\FlixOne.InventoryManagement.dll

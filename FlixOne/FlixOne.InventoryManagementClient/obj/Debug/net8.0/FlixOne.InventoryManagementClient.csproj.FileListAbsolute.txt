@@ -1,0 +1,5 @@
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementClient\obj\Debug\net8.0\FlixOne.InventoryManagementClient.GeneratedMSBuildEditorConfig.editorconfig
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementClient\obj\Debug\net8.0\FlixOne.InventoryManagementClient.AssemblyInfoInputs.cache
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementClient\obj\Debug\net8.0\FlixOne.InventoryManagementClient.AssemblyInfo.cs
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementClient\obj\Debug\net8.0\FlixOne.InventoryManagementClient.csproj.CoreCompileInputs.cache
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementClient\obj\Debug\net8.0\FlixOne.InventoryManagementClient.sourcelink.json

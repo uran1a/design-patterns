@@ -7,7 +7,7 @@ namespace FlixOne.InventoryManagementClient
         private static void Main(string[] args)
         {
             Greeting();
-            GetCommand("?").RunCommand(out bool shouldQuit);
+            //GetCommand("?").RunCommand(out bool shouldQuit);
         }
 
         private static void Greeting()
@@ -16,7 +16,7 @@ namespace FlixOne.InventoryManagementClient
 
             Console.WriteLine("*********************************************************************************************");
             Console.WriteLine("*                                                                                           *");
-            Console.WriteLine("*               Welcome to FlixOne Inventory Management System                              *");
+            Console.WriteLine("*               Добро пожаловать в FlixOne Систему Управления Инвентаризаций                *");
             Console.WriteLine($"*                                                                                v{version}   *");
             Console.WriteLine("*********************************************************************************************");
             Console.WriteLine("");
