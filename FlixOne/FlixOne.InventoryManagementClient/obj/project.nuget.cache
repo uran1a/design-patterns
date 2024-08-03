@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "pDMPZspSbwxKgoXa4bsTNKuaLNPNlDRGcsgD9dlBaLJoDI4Fp+ZX2ztVMuE4ri2Y9EefXArEIFvnNwo+IHsf0A==",
+  "dgSpecHash": "uuS8EctbKDxc98fIhQ4a8ZItgDkkcuJ2xXyA+cKXitqXS+u2olLuwQfX1XNIEMzgE4v4WH3Ac+KfiRkNCeKCmQ==",
   "success": true,
   "projectFilePath": "N:\\books\\.Net\\DesignPattents\\FlixOne\\FlixOne.InventoryManagementClient\\FlixOne.InventoryManagementClient.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\voron\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\voron\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

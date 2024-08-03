@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace FlixOne.InventoryManagement.Commands.Inventories
 {
-    internal class GetInventoriesCommand : NonTerminatingCommand
+    internal class GetInventoryCommand : NonTerminatingCommand
     {
         private readonly IInventoryContext _context;
 
-        public GetInventoriesCommand(IUserInterface userInterface, IInventoryContext context) : base(userInterface)
+        public GetInventoryCommand(IUserInterface userInterface, IInventoryContext context) : base(userInterface)
         {
             _context = context;
         }

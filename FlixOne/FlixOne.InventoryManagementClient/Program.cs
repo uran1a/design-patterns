@@ -1,27 +1,30 @@
-﻿using System.Reflection;
+﻿using FlixOne.InventoryManagement.Commands.Factories;
+using FlixOne.InventoryManagement.UserInterface;
+using Microsoft.Extensions.DependencyInjection;
+using System.Reflection;
+using System.Security.Authentication.ExtendedProtection;
 
-namespace FlixOne.InventoryManagementClient
+namespace FlixOne.InventoryManagementClient;
+
+public class Program
 {
-    public class Program
+    private static void Main(string[] args)
     {
-        private static void Main(string[] args)
-        {
-            Greeting();
-            //GetCommand("?").RunCommand(out bool shouldQuit);
-        }
+        IServiceCollection services = new ServiceCollection();
+        ConfigureServices(services);
+        IServiceProvider serviceProvider = services.BuildServiceProvider();
 
-        private static void Greeting()
-        {
-            var version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+        var service = serviceProvider.GetService<ICatalogService>();
+        service.Run();
 
-            Console.WriteLine("*********************************************************************************************");
-            Console.WriteLine("*                                                                                           *");
-            Console.WriteLine("*               Добро пожаловать в FlixOne Систему Управления Инвентаризаций                *");
-            Console.WriteLine($"*                                                                                v{version}   *");
-            Console.WriteLine("*********************************************************************************************");
-            Console.WriteLine("");
-        }
+        Console.WriteLine("CatalogServise завершен");
+        Console.ReadLine();
+    }
 
-
+    private static void ConfigureServices(IServiceCollection services)
+    {
+        services.AddTransient<IUserInterface, ConsoleUserInterface>();
+        services.AddTransient<ICatalogService, CatalogService>();
+        services.AddTransient<IInventoryCommandFactory, InventoryCommandFactory>();
     }
 }

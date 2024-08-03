@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FlixOne.InventoryManagementClient")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f0d9536e5ab44fafd7a27d30c77339f28c015320")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+39f5e22db546ae36eefcbc885f08f622e10673d9")]
 [assembly: System.Reflection.AssemblyProductAttribute("FlixOne.InventoryManagementClient")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FlixOne.InventoryManagementClient")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

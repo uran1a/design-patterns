@@ -16,7 +16,7 @@ public interface IInventoryCommandFactory
     InventoryCommand GetCommand(string input);
 }
 
-internal class InventoryCommandFactory : IInventoryCommandFactory
+public class InventoryCommandFactory : IInventoryCommandFactory
 {
     private readonly IUserInterface _userInterface;
     private readonly IInventoryContext _context = InventoryContext.Instance;
@@ -33,10 +33,13 @@ internal class InventoryCommandFactory : IInventoryCommandFactory
             case "quit":
                 return new QuitCommand(_userInterface);
             case "a":
-            case "addinventory":
+            case "add-inventory":
                 return new AddInventoryCommand(_userInterface, _context);
+            case "g":
+            case "get-inventory":
+                return new GetInventoryCommand(_userInterface, _context);
             case "u":
-            case "updatequantity":
+            case "update-quantity":
                 return new UpdateQuantityCommand(_userInterface, _context);
             case "?":
                 return new HelpCommand(_userInterface);

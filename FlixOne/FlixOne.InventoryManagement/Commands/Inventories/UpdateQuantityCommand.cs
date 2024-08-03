@@ -40,6 +40,6 @@ internal class UpdateQuantityCommand : NonTerminatingCommand, IParameterisedComm
 
     protected override bool InternalCommand()
     {
-        throw new NotImplementedException();
+        return _context.UpdateQuantity(InventoryName, Quantity);
     }
 }
