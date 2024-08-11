@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace FlixOne.InventoryManagement.Repositories
 {
-    internal interface IInventoryContext
+    public interface IInventoryContext
     {
-        Book[] GetBooks();
-        bool AddBook(string name);
-        bool UpdateQuantity(string name, int quantity);
+        public Book[] GetBooks();
+        public bool AddBook(string name);
+        public bool UpdateQuantity(string name, int quantity);
     }
     internal class InventoryContext : IInventoryContext
     {
