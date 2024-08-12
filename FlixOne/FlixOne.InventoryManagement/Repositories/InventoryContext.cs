@@ -13,6 +13,7 @@ namespace FlixOne.InventoryManagement.Repositories
         public Book[] GetBooks();
         public bool AddBook(string name);
         public bool UpdateQuantity(string name, int quantity);
+        public bool DeleteBook(string name);
     }
     internal class InventoryContext : IInventoryContext
     {
@@ -60,6 +61,13 @@ namespace FlixOne.InventoryManagement.Repositories
             {
                 _books[name].Quantity += quantity;
             }
+
+            return true;
+        }
+
+        public bool DeleteBook(string name)
+        {
+            _books.Remove(name);
 
             return true;
         }

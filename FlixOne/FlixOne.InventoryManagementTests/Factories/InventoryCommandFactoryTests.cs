@@ -60,21 +60,28 @@ public class InventoryCommandFactoryTests
     public void AddInventoryCommand_Successful()
     {
         Assert.IsInstanceOfType(Factory.GetCommand("a"), typeof(AddInventoryCommand), "a should be AddInventoryCommand");
-        Assert.IsInstanceOfType(Factory.GetCommand("add-inventory"), typeof(AddInventoryCommand), "addinventory should be AddInventoryCommand");
+        Assert.IsInstanceOfType(Factory.GetCommand("add-inventory"), typeof(AddInventoryCommand), "add-inventory should be AddInventoryCommand");
     }
 
     [TestMethod]
     public void GetInventoryCommand_Successful()
     {
         Assert.IsInstanceOfType(Factory.GetCommand("g"), typeof(GetInventoryCommand), "g should be GetInventoryCommand");
-        Assert.IsInstanceOfType(Factory.GetCommand("get-inventory"), typeof(GetInventoryCommand), "getinventory should be GetInventoryCommand");
+        Assert.IsInstanceOfType(Factory.GetCommand("get-inventory"), typeof(GetInventoryCommand), "get-inventory should be GetInventoryCommand");
     }
 
     [TestMethod]
     public void UpdateQuantityCommand_Successful()
     {
         Assert.IsInstanceOfType(Factory.GetCommand("u"), typeof(UpdateQuantityCommand), "u should be UpdateQuantityCommand");
-        Assert.IsInstanceOfType(Factory.GetCommand("update-quantity"), typeof(UpdateQuantityCommand), "updatequantity should be UpdateQuantityCommand");
-        Assert.IsInstanceOfType(Factory.GetCommand("UpdaTE-Quantity"), typeof(UpdateQuantityCommand), "UpdaTEQuantity should be UpdateQuantityCommand");
+        Assert.IsInstanceOfType(Factory.GetCommand("update-quantity"), typeof(UpdateQuantityCommand), "update-quantity should be UpdateQuantityCommand");
+        Assert.IsInstanceOfType(Factory.GetCommand("UpdaTE-Quantity"), typeof(UpdateQuantityCommand), "UpdaTE-Quantity should be UpdateQuantityCommand");
+    }
+
+    [TestMethod]
+    public void DeleteInventoryCommand_Successful()
+    {
+        Assert.IsInstanceOfType(Factory.GetCommand("d"), typeof(DeleteInventoryCommand), "u should be DeleteInventoryCommand");
+        Assert.IsInstanceOfType(Factory.GetCommand("delete-inventory"), typeof(DeleteInventoryCommand), "delete-inventory should be DeleteInventoryCommand");
     }
 }

@@ -50,6 +50,17 @@ public class InventoryContextTests
         {
             Assert.AreEqual(0, book.Quantity);
         }
+
+        // удаляем 30 книг
+        foreach (var book in InventoryContext.Instance.GetBooks())
+        {
+            tasks.Add(DeleteBook(book.Name));
+        }
+
+        Task.WaitAll(tasks.ToArray());
+        tasks.Clear();
+
+        Assert.AreEqual(0, InventoryContext.Instance.GetBooks().Length);
     }
 
     public Task AddBook(string book)
@@ -68,4 +79,11 @@ public class InventoryContextTests
         });
     }
 
+    public Task DeleteBook(string name)
+    {
+        return Task.Run(() =>
+        {
+            Assert.IsTrue(InventoryContext.Instance.DeleteBook(name));
+        });
+    }
 }

@@ -41,6 +41,9 @@ public class InventoryCommandFactory : IInventoryCommandFactory
             case "u":
             case "update-quantity":
                 return new UpdateQuantityCommand(_userInterface, _context);
+            case "d":
+            case "delete-inventory":
+                return new DeleteInventoryCommand(_userInterface, _context);
             case "?":
                 return new HelpCommand(_userInterface);
             default:

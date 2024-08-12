@@ -44,6 +44,13 @@ internal class TestInventoryContext : IInventoryContext
         return true;
     }
 
+    public bool DeleteBook(string name)
+    {
+        _books.Remove(name);
+
+        return true;
+    }
+
     public Book[] GetAddedBooks()
     {
         return _books.Where(book => !_seedDictionary.ContainsKey(book.Key))
@@ -54,6 +61,13 @@ internal class TestInventoryContext : IInventoryContext
     public Book[] GetUpdatedBooks()
     {
         return _books.Where(book => _seedDictionary[book.Key].Quantity != book.Value.Quantity)
+            .Select(book => book.Value)
+            .ToArray();
+    }
+
+    public Book[] GetDeletedBooks()
+    {
+        return _seedDictionary.Where(book => !_books.ContainsKey(book.Key))
             .Select(book => book.Value)
             .ToArray();
     }
