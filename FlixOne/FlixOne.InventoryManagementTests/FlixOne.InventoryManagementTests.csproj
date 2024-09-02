@@ -16,4 +16,12 @@
     <PackageReference Include="coverlet.collector" Version="6.0.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\FlixOne.InventoryManagement\FlixOne.InventoryManagement.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Inventories\" />
+  </ItemGroup>
+
 </Project>
