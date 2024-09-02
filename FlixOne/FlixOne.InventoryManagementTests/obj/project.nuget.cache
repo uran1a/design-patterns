@@ -1,11 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "Ncnj6B+2S2f+KkTe4JkhwypYpv62DoQ0WTazOHg0CGPDYMJPSZNxIiTdadFukHiqlOOnFY3y+ETLAEGICHFzKQ==",
+  "dgSpecHash": "tw+26eCCsaQbx4fjXdrgb+iNpjXbkO2gWDz8/06pa0zI96Zg7nKyyaIWd6vA9M6//beZcCDtZDG51FbbX7fPXA==",
   "success": true,
   "projectFilePath": "N:\\books\\.Net\\DesignPattents\\FlixOne\\FlixOne.InventoryManagementTests\\FlixOne.InventoryManagementTests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\voron\\.nuget\\packages\\coverlet.collector\\6.0.0\\coverlet.collector.6.0.0.nupkg.sha512",
     "C:\\Users\\voron\\.nuget\\packages\\microsoft.codecoverage\\17.6.0\\microsoft.codecoverage.17.6.0.nupkg.sha512",
+    "C:\\Users\\voron\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\8.0.0\\microsoft.extensions.dependencyinjection.8.0.0.nupkg.sha512",
+    "C:\\Users\\voron\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\8.0.1\\microsoft.extensions.dependencyinjection.abstractions.8.0.1.nupkg.sha512",
     "C:\\Users\\voron\\.nuget\\packages\\microsoft.net.test.sdk\\17.6.0\\microsoft.net.test.sdk.17.6.0.nupkg.sha512",
     "C:\\Users\\voron\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.6.0\\microsoft.testplatform.objectmodel.17.6.0.nupkg.sha512",
     "C:\\Users\\voron\\.nuget\\packages\\microsoft.testplatform.testhost\\17.6.0\\microsoft.testplatform.testhost.17.6.0.nupkg.sha512",

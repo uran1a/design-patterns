@@ -19,11 +19,12 @@ public interface IInventoryCommandFactory
 public class InventoryCommandFactory : IInventoryCommandFactory
 {
     private readonly IUserInterface _userInterface;
-    private readonly IInventoryContext _context = InventoryContext.Instance;
+    private readonly IInventoryContext _context;
 
-    public InventoryCommandFactory(IUserInterface userInterface)
+    public InventoryCommandFactory(IUserInterface userInterface, IInventoryContext context)
     {
         _userInterface = userInterface;
+        _context = context;
     }
     public InventoryCommand GetCommand(string input)
     {

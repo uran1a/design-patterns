@@ -10,3 +10,4 @@ N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\refint\FlixOne.InventoryManagement.dll
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.pdb
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\ref\FlixOne.InventoryManagement.dll
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagement\obj\Debug\net8.0\FlixOne.InventoryManagement.csproj.AssemblyReference.cache

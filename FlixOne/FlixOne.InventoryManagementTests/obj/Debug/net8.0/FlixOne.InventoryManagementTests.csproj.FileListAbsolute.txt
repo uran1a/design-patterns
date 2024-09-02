@@ -113,3 +113,5 @@ N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\obj\Debug\
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\bin\Debug\net8.0\CoverletSourceRootsMapping_FlixOne.InventoryManagementTests
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\bin\Debug\net8.0\FlixOne.InventoryManagement.dll
 N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\bin\Debug\net8.0\FlixOne.InventoryManagement.pdb
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.dll
+N:\books\.Net\DesignPattents\FlixOne\FlixOne.InventoryManagementTests\bin\Debug\net8.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll

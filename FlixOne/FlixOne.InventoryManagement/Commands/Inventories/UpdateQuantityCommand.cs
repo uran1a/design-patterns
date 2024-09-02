@@ -1,5 +1,6 @@
 ﻿using FlixOne.InventoryManagement.Commands.Abstraсtions;
 using FlixOne.InventoryManagement.Repositories;
+using FlixOne.InventoryManagement.Repositories.Abstractions;
 using FlixOne.InventoryManagement.UserInterface;
 using System;
 using System.Collections.Generic;
@@ -11,9 +12,9 @@ namespace FlixOne.InventoryManagement.Commands.Inventories;
 
 internal class UpdateQuantityCommand : NonTerminatingCommand, IParameterisedCommand
 {
-    private readonly IInventoryContext _context;
+    private readonly IInventoryWriteContext _context;
     
-    internal UpdateQuantityCommand(IUserInterface userInterface, IInventoryContext context) : base(userInterface)
+    internal UpdateQuantityCommand(IUserInterface userInterface, IInventoryWriteContext context) : base(userInterface)
     {
         _context = context;
     }

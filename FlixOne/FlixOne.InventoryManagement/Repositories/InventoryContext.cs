@@ -1,49 +1,37 @@
 ﻿using FlixOne.InventoryManagement.Models;
+using FlixOne.InventoryManagement.Repositories.Abstractions;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace FlixOne.InventoryManagement.Repositories
 {
-    public interface IInventoryContext
+    public interface IInventoryContext : IInventoryReadContext, IInventoryWriteContext { }
+    public class InventoryContext : IInventoryContext
     {
-        public Book[] GetBooks();
-        public bool AddBook(string name);
-        public bool UpdateQuantity(string name, int quantity);
-        public bool DeleteBook(string name);
-    }
-    internal class InventoryContext : IInventoryContext
-    {
-        private static InventoryContext _context;
         private static object _lock = new object();
 
         private readonly IDictionary<string, Book> _books;
 
-        public static InventoryContext Instance
-        {
-            get
-            {
-                if(_context == null)
-                {
-                    lock (_lock)
-                    {
-                        if(_context == null)
-                        {
-                            _context = new InventoryContext();
-                        }
-                    }
-                }
-                return _context;
-            }
-        }
-
-        protected InventoryContext()
+        public InventoryContext()
         {
             _books = new ConcurrentDictionary<string, Book>();
         }
+
+        private IInventoryContext GetInventoryContext()
+        {
+            IServiceCollection services = new ServiceCollection();
+            services.AddSingleton<IInventoryContext, IInventoryContext>();
+            var provider = services.BuildServiceProvider();
+
+            return provider.GetService<IInventoryContext>();
+        }
+
         public bool AddBook(string name)
         {
             _books.Add(name, new Book() { Name = name });

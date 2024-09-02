@@ -1,4 +1,6 @@
 ﻿using FlixOne.InventoryManagement.Commands.Factories;
+using FlixOne.InventoryManagement.Repositories;
+using FlixOne.InventoryManagement.Repositories.Abstractions;
 using FlixOne.InventoryManagement.UserInterface;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
@@ -26,5 +28,10 @@ public class Program
         services.AddTransient<IUserInterface, ConsoleUserInterface>();
         services.AddTransient<ICatalogService, CatalogService>();
         services.AddTransient<IInventoryCommandFactory, InventoryCommandFactory>();
+
+        var context = new InventoryContext();
+        services.AddSingleton<IInventoryReadContext, InventoryContext>(x => context);
+        services.AddSingleton<IInventoryWriteContext, InventoryContext>(x => context);
+        services.AddSingleton<IInventoryContext, InventoryContext>(x => context);
     }
 }

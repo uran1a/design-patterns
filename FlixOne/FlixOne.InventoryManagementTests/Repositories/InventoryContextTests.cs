@@ -1,6 +1,8 @@
 ﻿using FlixOne.InventoryManagement.Repositories;
+using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.Design;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,6 +12,15 @@ namespace FlixOne.InventoryManagementTests.Repositories;
 [TestClass]
 public class InventoryContextTests
 {
+    private ServiceProvider Services { get; set; }
+    [TestInitialize]
+    public void Startup()
+    {
+        IServiceCollection services = new ServiceCollection();
+        services.AddSingleton<IInventoryContext, InventoryContext>();
+        Services = services.BuildServiceProvider();
+    }
+
     [TestMethod]
     public void MaintainBooks_Successful()
     {
@@ -46,13 +57,13 @@ public class InventoryContextTests
         Task.WaitAll(tasks.ToArray());
 
         // у всех книг поле 'Количество' должно быть равно 0            
-        foreach (var book in InventoryContext.Instance.GetBooks())
+        foreach (var book in Services.GetService<IInventoryContext>().GetBooks())
         {
             Assert.AreEqual(0, book.Quantity);
         }
 
         // удаляем 30 книг
-        foreach (var book in InventoryContext.Instance.GetBooks())
+        foreach (var book in Services.GetService<IInventoryContext>().GetBooks())
         {
             tasks.Add(DeleteBook(book.Name));
         }
@@ -60,14 +71,14 @@ public class InventoryContextTests
         Task.WaitAll(tasks.ToArray());
         tasks.Clear();
 
-        Assert.AreEqual(0, InventoryContext.Instance.GetBooks().Length);
+        Assert.AreEqual(0, Services.GetService<IInventoryContext>().GetBooks().Length);
     }
 
     public Task AddBook(string book)
     {
         return Task.Run(() =>
         {
-            Assert.IsTrue(InventoryContext.Instance.AddBook(book));
+            Assert.IsTrue(Services.GetService<IInventoryContext>().AddBook(book));
         });
     }
 
@@ -75,7 +86,7 @@ public class InventoryContextTests
     {
         return Task.Run(() =>
         {
-            Assert.IsTrue(InventoryContext.Instance.UpdateQuantity(book, quantity));
+            Assert.IsTrue(Services.GetService<IInventoryContext>().UpdateQuantity(book, quantity));
         });
     }
 
@@ -83,7 +94,7 @@ public class InventoryContextTests
     {
         return Task.Run(() =>
         {
-            Assert.IsTrue(InventoryContext.Instance.DeleteBook(name));
+            Assert.IsTrue(Services.GetService<IInventoryContext>().DeleteBook(name));
         });
     }
 }

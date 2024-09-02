@@ -1,5 +1,6 @@
 ﻿using FlixOne.InventoryManagement.Commands.Abstraсtions;
 using FlixOne.InventoryManagement.Repositories;
+using FlixOne.InventoryManagement.Repositories.Abstractions;
 using FlixOne.InventoryManagement.UserInterface;
 using System;
 using System.Collections.Generic;
@@ -12,10 +13,10 @@ namespace FlixOne.InventoryManagement.Commands.Inventories;
 
 internal class DeleteInventoryCommand : NonTerminatingCommand, IParameterisedCommand
 {
-    private readonly IInventoryContext _context;
+    private readonly IInventoryWriteContext _context;
 
     private string InventoryName { get; set; }
-    public DeleteInventoryCommand(IUserInterface userInterface, IInventoryContext context) : base(userInterface)
+    public DeleteInventoryCommand(IUserInterface userInterface, IInventoryWriteContext context) : base(userInterface)
     {
         _context = context;
     }
